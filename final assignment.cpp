@@ -124,7 +124,7 @@ void right(int a[4][4])
 					}
 				}
 				else{
-					r--;
+					r--;			//decrementing r
 				}
 			}
 		}
@@ -155,7 +155,7 @@ void left(int a[4][4]){						//non returning value left move function.
 					}
 				}
 				else{
-					r++;
+					r++;			//incrementing r
 				}
 			}
 		}
