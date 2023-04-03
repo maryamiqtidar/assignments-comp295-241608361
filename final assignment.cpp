@@ -7,7 +7,7 @@ using namespace std;
 int score = 0;					//initializing the score as zero
 int highest = 0;				//initializing the highest score as zero
 
-void pattern(int a[4][4]){
+void pattern(int a[4][4]){		//displaying the pattern and game
 	int i,j;
 	cout << "\n\n\n\n\t\t--[ THE 2048 PUZZLE ]--\t\t\t\t\t";
 	printf("Score: %d",score);
