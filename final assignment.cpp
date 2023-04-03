@@ -226,11 +226,9 @@ int checkwon(int a[4][4])
 int main()
 {
 	HANDLE h= GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(h,2);
+	SetConsoleTextAttribute(h,14);
 	cout<<"\n\n\n\n\t\t\t\t--[ THE 2048 PUZZLE ]--";
-	SetConsoleTextAttribute(h,3);
 	cout<<"\n\n\n\n\t\tInstructions: Use Arrow keys to play the game.\n\n\n\t\tPress 'Enter' to start the game!";
-	SetConsoleTextAttribute(h,4);
 	cout<<"\n\n\n\t\tPress 'Backspace' to quit!";
 	int c;
 	c=getch();
@@ -275,24 +273,23 @@ int main()
 			
 		if(!checkover(a))				//if checkover function gives 0
 		{
-			SetConsoleTextAttribute(h,3);
+			SetConsoleTextAttribute(h,14);
 			cout<<"\n\n\t\t\tGAME OVER!!";
 			cout<<"\n\t\t\tPress 'Enter' to play again!!";
-			SetConsoleTextAttribute(h,4);
 			cout<<"\n\t\t\tPress 'esc' to end game!!\n\n\n";
 			ch = getch();
 			if (ch==13) {
 			score =0;
+			cout << "\n\n\n\n\n\n\n\n\n";
 			main();
 		}
 			if (ch==27) break;
 		}	
 		if (checkwon(a))				//if user wins the game
 		{
-			SetConsoleTextAttribute(h,3);
+			SetConsoleTextAttribute(h,14);
 			cout << "\n\n\t\t\tYOU WON!!";
 			cout<<"\n\t\t\tPress 'Enter' to play again!!";
-			SetConsoleTextAttribute(h,4);
 			cout<<"\n\t\t\tPress 'esc' to end game!!\n\n\n";
 			ch = getch();
 			if (ch==13) main();
