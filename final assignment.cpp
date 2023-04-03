@@ -78,7 +78,7 @@ void up(int a[4][4])				//non returning value up move function.
 					if (a[l][j]==a[i][j]){			//if any number in first row is equal to any number in column
 						a[l][j] *= 2;
 						a[i][j] = 0;
-						score = score + a[l][j];
+						score = score + a[l][j];		//incrementing the score 
 					}
 					else{
 						if (a[l][j]==0){
@@ -103,14 +103,14 @@ void right(int a[4][4])
 {
 	int i , j , r;		//i for column counter,r and j for rown counter.
 	for (i=0;i<4;i++){				//forward i loop.
-		r=3;					//l incrementing a i. r is initialized as last element row wise.
+		r=3;					//r is initialized as last element row wise.
 		for (j=2;j>=0;j--){		//backward j loop which will run 3 times
 			if (a[i][j]!=0){
 				if (a[i][j+1]==0 || a[i][j+1]==a[i][j]){
 					if (a[i][r]==a[i][j]){
 						a[i][r] *= 2;		//adding same numbers or multiplying by 2 are same things.
 						a[i][j] = 0;
-						score = score + a[i][r];
+						score = score + a[i][r];		//incrementing the score
 					}
 					else{
 						if (a[i][r]==0){		
@@ -131,17 +131,17 @@ void right(int a[4][4])
 	}
 }
 
-void left(int a[4][4]){
-	int i,j,r;
-	for(i=0;i<4;i++){
-		r=0;
+void left(int a[4][4]){						//non returning value left move function.
+	int i,j,r;								//i for column counter,r and j for rown counter.
+	for(i=0;i<4;i++){						//forward loop
+		r=0;								//r is initialized as first row wise
 		for(j=1;j<4;j++){
 			if (a[i][j]!=0){
 				if(a[i][j-1]==0 || a[i][j-1]==a[i][j]){
 					if (a[i][r]==a[i][j]){
-						a[i][r] *= 2;
+						a[i][r] *= 2;				//adding same numbers or multiplying by 2 are same things.
 						a[i][j] =0;
-						score = score + a[i][r];
+						score = score + a[i][r];		//incrementing the score
 					}
 					else{
 						if (a[i][r]==0){
@@ -175,12 +175,12 @@ void rn(int a[4][4]){
 	}
 }
 
-int check(int b[4][4],int a[4][4])
+int check(int b[4][4],int a[4][4])			//check function with two diff 2D arrays
 {
 	int f=1,i,j;
 	for(i=0;i<4;i++)
     	for(j=0;j<4;j++)
-    		if(b[i][j]!=a[i][j])
+    		if(b[i][j]!=a[i][j])			//checking if both lists are not equal
     		{
     			f=0;
     			break;
@@ -188,7 +188,7 @@ int check(int b[4][4],int a[4][4])
 	return f;
 }
 
-int checkover(int a[4][4])
+int checkover(int a[4][4])				//checking if game is over
 {
 	int m=0,n=0,k=0,i,j;
 	for(i=0;i<4;i++)
