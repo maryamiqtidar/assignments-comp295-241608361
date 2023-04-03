@@ -60,7 +60,7 @@ void down(int a[4][4])		//non returning value down move function.3
 					}
 				}
 				else {
-					l--;
+					l--;				//decrementing l
 				}
 			}
 		}
@@ -92,7 +92,7 @@ void up(int a[4][4])				//non returning value up move function.
 					}
 				}
 				else{
-					l++;
+					l++;				//incrementing l
 				}
 			}
 		}
