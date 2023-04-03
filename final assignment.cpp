@@ -280,7 +280,7 @@ int main()
 			ch = getch();
 			if (ch==13) {
 			score =0;
-			cout << "\n\n\n\n\n\n\n\n\n";
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 			main();
 		}
 			if (ch==27) break;
