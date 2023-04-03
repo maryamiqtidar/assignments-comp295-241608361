@@ -4,8 +4,8 @@
 #include<windows.h>				//to access windows library
 using namespace std;
 
-int score = 0;
-int highest = 0;
+int score = 0;					//initializing the score as zero
+int highest = 0;				//initializing the highest score as zero
 
 void pattern(int a[4][4]){
 	int i,j;
@@ -287,7 +287,7 @@ int main()
 		}
 			if (ch==27) break;
 		}	
-		if (checkwon(a))
+		if (checkwon(a))				//if user wins the game
 		{
 			SetConsoleTextAttribute(h,3);
 			cout << "\n\n\t\t\tYOU WON!!";
