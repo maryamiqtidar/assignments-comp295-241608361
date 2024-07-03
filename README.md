@@ -1,2 +1,2 @@
-# assignments-comp295-241608361
-Assignment 01
+# 2048 game using C++
+
